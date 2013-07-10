@@ -11,13 +11,9 @@ var fs = require('fs');
 //response.send(fs.readFileSync("index.html", {encoding:"utf8"});
 //response.send(fs.readFileSync("index.html", "utf8");
 
-fs.readFile('index.html', {encoding:"utf8"}, function (err, data) {
-if (err) {
-response.send(err);
-}
-else {
-response.send(data);
-}
+var buf = new Buffer (fs.readFileSync("index.html", "utf-8"));
+
+response.send(buf.toString());
 });
 
 
