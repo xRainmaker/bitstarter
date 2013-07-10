@@ -1,13 +1,15 @@
-var express = require('express');
-
+Avar express = require('express');
+var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
 //  response.send('Hello World2!');
 
-var fs = require('fs');
+//var fs = require('fs');
+
 var buffer = new buffer ();
-    response.send(buffer.tostring('utc 8', fs.readFilesync("index.html")))});
+    response.send(fs.readFilesync("index.html", "utf8");
+});
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
