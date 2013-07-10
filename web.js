@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
 
 var fs = require('fs');
 var buffer = new buffer ();
-    response.send(buffer.tostring('utc 8', fs.readFilesSync("index.html")))});
+    response.send(buffer.tostring('utc 8', fs.readFilesync("index.html")))});
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
